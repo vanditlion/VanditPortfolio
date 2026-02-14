@@ -2,7 +2,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import sr from '@utils/sr';
 import { srConfig, github } from '@config';
 import styled from 'styled-components';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 import { theme, mixins, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
