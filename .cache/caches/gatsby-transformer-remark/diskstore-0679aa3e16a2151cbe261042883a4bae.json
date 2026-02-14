@@ -1,0 +1,5 @@
+{
+  "expireTime": 9007201025786501000,
+  "key": "transformer-remark-markdown-html-b54572af264a19295ac3dd15f68e0cb8-gatsby-remark-external-linksgatsby-remark-imagesgatsby-remark-code-titlesgatsby-remark-prismjs-",
+  "val": "<ul>\n<li>Built analytics platform for large-scale market/transaction datasets; improved efficiency by 22%.</li>\n<li>Built ETL pipelines using Azure Databricks, Delta Lake, Spark Structured Streaming.</li>\n<li>Deployed ML models (LightGBM, Transformer Autoencoders, scikit-learn) for forecasting/anomaly/classification; achieved 89% F1 and 94% recall.</li>\n<li>Used RoBERTa + Sentence-BERT embeddings; reduced manual review by 21%.</li>\n<li>Tuned via Optuna; used SHAP/LIME for explainability.</li>\n<li>Dockerized and deployed on AKS with KServe; enabled real-time analytics dashboards.</li>\n<li>Implemented MLflow/Kubeflow/Evidently monitoring; maintained accuracy >91%.</li>\n</ul>"
+}

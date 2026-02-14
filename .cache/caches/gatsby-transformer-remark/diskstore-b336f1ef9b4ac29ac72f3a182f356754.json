@@ -1,0 +1,51 @@
+{
+  "expireTime": 9007201025786501000,
+  "key": "transformer-remark-markdown-ast-c75c10e5ef061e1cfeab3d6e6b37f832-gatsby-remark-external-linksgatsby-remark-imagesgatsby-remark-code-titlesgatsby-remark-prismjs-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "AI/ML Engineer with 3+ years of experience designing, developing, and deploying scalable machine learning and data solutions. Skilled in NLP, generative AI, model optimization, and real-time data pipelines.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 207, "offset": 207 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 207, "offset": 207 },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "I enjoy building production-ready AI services and data pipelines that turn complex data into reliable, actionable insights.",
+            "position": {
+              "start": { "line": 4, "column": 1, "offset": 209 },
+              "end": { "line": 4, "column": 124, "offset": 332 },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 4, "column": 1, "offset": 209 },
+          "end": { "line": 4, "column": 124, "offset": 332 },
+          "indent": []
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 5, "column": 1, "offset": 333 }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "componentChunkName": "component---src-pages-archive-js",
+  "path": "/archive/",
+  "result": {
+    "data": {
+      "allMarkdownRemark": {
+        "edges": [
+          {
+            "node": {
+              "frontmatter": {
+                "date": "2025-01-01",
+                "title": "Virtual Event Management System",
+                "tech": ["React.js", "Node.js", "Stripe", "Zoom"],
+                "github": "",
+                "external": "",
+                "company": null
+              },
+              "html": "<p>React.js + Node.js platform integrating Stripe payments and Zoom conferencing, enabling seamless registration, attendance tracking, real-time communication, and interactive features — improving engagement by 50%.</p>"
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "date": "2024-12-01",
+                "title": "Smart Scheduling & Booking System",
+                "tech": ["Node.js", "React", "PostgreSQL", "Stripe", "Twilio"],
+                "github": "",
+                "external": "",
+                "company": null
+              },
+              "html": "<p>AI-driven calendar booking system built with Node.js, React, and PostgreSQL with multi-vendor support, Stripe payment integration, and Twilio notifications — providing smart time slot suggestions and seamless customer interaction.</p>"
+            }
+          }
+        ]
+      }
+    },
+    "pageContext": {}
+  }
+}

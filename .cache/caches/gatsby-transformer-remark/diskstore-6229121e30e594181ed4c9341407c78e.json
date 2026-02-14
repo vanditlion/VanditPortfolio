@@ -1,0 +1,32 @@
+{
+  "expireTime": 9007201025786501000,
+  "key": "transformer-remark-markdown-html-ast-35f8f997f745ab495f577f450067e24a-gatsby-remark-external-linksgatsby-remark-imagesgatsby-remark-code-titlesgatsby-remark-prismjs-",
+  "val": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {},
+        "children": [
+          {
+            "type": "text",
+            "value": "Built a smart multi-vendor scheduling and booking system using Node.js, React, and PostgreSQL with Stripe payment integration and Twilio notifications, delivering smart slot suggestions for efficient customer booking experiences.",
+            "position": {
+              "start": { "line": 2, "column": 1, "offset": 1 },
+              "end": { "line": 2, "column": 230, "offset": 230 }
+            }
+          }
+        ],
+        "position": {
+          "start": { "line": 2, "column": 1, "offset": 1 },
+          "end": { "line": 2, "column": 230, "offset": 230 }
+        }
+      }
+    ],
+    "position": {
+      "start": { "line": 1, "column": 1, "offset": 0 },
+      "end": { "line": 3, "column": 1, "offset": 231 }
+    }
+  }
+}

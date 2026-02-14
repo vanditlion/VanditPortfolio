@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007201025786501000,
+  "key": "6a48f3a8-7ccd-55f3-818a-31e250024cbf{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"trim\":false,\"toFormat\":\"webp\",\"toFormatBase64\":\"\",\"cropFocus\":17,\"fit\":\"cover\",\"width\":20,\"height\":22}",
+  "val": {
+    "src": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACwBQCdASoUABYAPtFcp04oJSOiKAqpABoJYgC7Muu6ABwOQMU9kQ/92QUxzONcdMzU7FBIscAA/udTyPhTBLC91QfE54evWuZohwxpJCz0AadNdRdBAVZGYkd+0u+rSk7xhvkOKD4CrD/3pqmp54UqTg3AqPnL9fkIrRXPCr/xPFXGYJYLqUDtH94kio/qfWQkM71T5n697XhBkDXEJSPFZsTRSo2RdU+kpVo3kST65WpqBPvM6+T/AbDYLc+H5cI883SsGUCTIGglAZaPAQAFsrdFKxR0AAA=",
+    "width": 20,
+    "height": 22,
+    "aspectRatio": 0.9090909090909091,
+    "originalName": "me.jpg"
+  }
+}
