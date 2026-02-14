@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   bottom: 0;
   left: ${props => (props.orientation === 'left' ? '40px' : 'auto')};
   right: ${props => (props.orientation === 'left' ? 'auto' : '40px')};
-  z-index: 10;
+  z-index: 20;
   color: ${colors.green};
   ${media.desktop`right: 25px;`};
   ${media.tablet`display: none;`};
@@ -32,7 +32,10 @@ const Side = ({ children, isHome, orientation }) => {
     <StyledContainer orientation={orientation}>
       <TransitionGroup component={null}>
         {isMounted && (
-          <CSSTransition classNames={isHome ? 'fade' : ''} timeout={isHome ? loaderDelay : 0}>
+          <CSSTransition
+            classNames={isHome ? 'fade' : ''}
+            timeout={isHome ? loaderDelay : 0}
+          >
             {children}
           </CSSTransition>
         )}

@@ -103,7 +103,9 @@ const ArchivePage = ({ location, data }) => {
   useEffect(() => {
     sr.reveal(revealTitle.current, srConfig());
     sr.reveal(revealTable.current, srConfig());
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 10)));
+    revealProjects.current.forEach((ref, i) =>
+      sr.reveal(ref, srConfig(i * 10)),
+    );
   }, []);
 
   return (
@@ -133,7 +135,8 @@ const ArchivePage = ({ location, data }) => {
             <tbody>
               {projects.length > 0 &&
                 projects.map(({ node }, i) => {
-                  const { date, github, external, title, tech, company } = node.frontmatter;
+                  const { date, github, external, title, tech, company } =
+                    node.frontmatter;
                   return (
                     <tr key={i} ref={el => (revealProjects.current[i] = el)}>
                       <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
@@ -150,7 +153,9 @@ const ArchivePage = ({ location, data }) => {
                             <span key={i}>
                               {item}
                               {''}
-                              {i !== tech.length - 1 && <span className="separator">&middot;</span>}
+                              {i !== tech.length - 1 && (
+                                <span className="separator">&middot;</span>
+                              )}
                             </span>
                           ))}
                       </td>
@@ -200,7 +205,7 @@ export const pageQuery = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/projects/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

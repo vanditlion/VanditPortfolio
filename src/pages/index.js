@@ -1,7 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About, Jobs, Featured, Projects, Contact } from '@components';
+import {
+  Layout,
+  Hero,
+  About,
+  Jobs,
+  Featured,
+  Projects,
+  Contact,
+} from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -44,16 +52,21 @@ export const pageQuery = graphql`
         }
       }
     }
-    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
       edges {
         node {
           frontmatter {
             title
             avatar {
               childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+                gatsbyImageData(
+                  width: 700
+                  layout: CONSTRAINED
+                  placeholder: TRACED_SVG
+                  tracedSVGOptions: { color: "#64ffda" }
+                )
               }
             }
             skills
@@ -64,7 +77,7 @@ export const pageQuery = graphql`
     }
     jobs: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/jobs/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
@@ -81,19 +94,12 @@ export const pageQuery = graphql`
     }
     featured: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/featured/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
           frontmatter {
             title
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
             tech
             github
             external
@@ -107,7 +113,7 @@ export const pageQuery = graphql`
         fileAbsolutePath: { regex: "/projects/" }
         frontmatter: { showInProjects: { ne: false } }
       }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
@@ -121,7 +127,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
+    contact: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/contact/" } }
+    ) {
       edges {
         node {
           frontmatter {

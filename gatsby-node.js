@@ -6,6 +6,7 @@
 
 const path = require('path');
 const _ = require('lodash');
+const webpack = require('webpack');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -16,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     {
       postsRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/posts/" } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
         limit: 1000
       ) {
         edges {
@@ -28,7 +29,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
       tagsGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___tags) {
+        group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
         }
       }
@@ -96,7 +97,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         '@pages': path.resolve(__dirname, 'src/pages'),
         '@styles': path.resolve(__dirname, 'src/styles'),
         '@utils': path.resolve(__dirname, 'src/utils'),
+        '@hooks': path.resolve(__dirname, 'src/hooks'),
       },
     },
+    plugins: [
+      new webpack.ProvidePlugin({
+        PropTypes: 'prop-types',
+        React: 'react',
+      }),
+    ],
   });
 };

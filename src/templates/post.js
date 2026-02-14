@@ -36,7 +36,9 @@ const StyledPostContent = styled.div`
 `;
 
 const PostTemplate = ({ data, location }) => {
-  const { frontmatter, html } = data.markdownRemark;
+  const { markdownRemark } = data;
+  if (!markdownRemark) return null;
+  const { frontmatter, html } = markdownRemark;
   const { title, date, tags } = frontmatter;
 
   return (
@@ -66,7 +68,11 @@ const PostTemplate = ({ data, location }) => {
             {tags &&
               tags.length > 0 &&
               tags.map((tag, i) => (
-                <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
+                <Link
+                  key={i}
+                  to={`/pensieve/tags/${kebabCase(tag)}/`}
+                  className="tag"
+                >
                   #{tag}
                 </Link>
               ))}

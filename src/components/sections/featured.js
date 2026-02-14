@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { FormattedIcon } from '@components/icons';
@@ -15,8 +15,6 @@ const StyledContainer = styled(Section)`
 `;
 const StyledContent = styled.div`
   position: relative;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
   ${media.thone`
     padding: 40px 40px 30px;
     z-index: 5;
@@ -105,26 +103,11 @@ const StyledLinkWrapper = styled.div`
     }
   }
 `;
-const StyledFeaturedImg = styled(Img)`
-  width: 100%;
-  max-width: 100%;
-  vertical-align: middle;
-  border-radius: ${theme.borderRadius};
-  position: relative;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(90%);
-  ${media.tablet`
-    object-fit: cover;
-    width: auto;
-    height: 100%;
-    filter: grayscale(100%) contrast(1) brightness(80%);
-  `};
-`;
 
 const StyledProject = styled.div`
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
   align-items: center;
   margin-bottom: 100px;
   ${media.thone`
@@ -142,7 +125,9 @@ const Featured = ({ data }) => {
   const revealProjects = useRef([]);
   useEffect(() => {
     sr.reveal(revealTitle.current, srConfig());
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    revealProjects.current.forEach((ref, i) =>
+      sr.reveal(ref, srConfig(i * 100)),
+    );
   }, []);
 
   return (
@@ -156,7 +141,10 @@ const Featured = ({ data }) => {
             const { external, title, tech, github } = frontmatter;
 
             return (
-              <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
+              <StyledProject
+                key={i}
+                ref={el => (revealProjects.current[i] = el)}
+              >
                 <StyledContent>
                   <StyledLabel>Featured Project</StyledLabel>
                   <StyledProjectName>
@@ -173,7 +161,9 @@ const Featured = ({ data }) => {
                       title
                     )}
                   </StyledProjectName>
-                  <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
+                  <StyledDescription
+                    dangerouslySetInnerHTML={{ __html: html }}
+                  />
                   {tech && (
                     <StyledTechList>
                       {tech.map((tech, i) => (
