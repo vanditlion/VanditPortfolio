@@ -1,11 +1,1 @@
-{
-  "data": {
-    "site": {
-      "siteMetadata": {
-        "title": "Vandit U Shah",
-        "siteUrl": "https://example.com",
-        "description": "Vandit U Shah is an AI/ML Engineer focused on NLP, generative AI, and scalable data pipelines."
-      }
-    }
-  }
-}
+{"data":{"site":{"siteMetadata":{"title":"Vandit U Shah","siteUrl":"https://example.com","description":"Vandit U Shah is an AI/ML Engineer focused on NLP, generative AI, and scalable data pipelines."}}}}
