@@ -162,23 +162,25 @@ const Jobs = ({ data }) => {
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
-  const focusTab = () => {
-    if (tabs.current[tabFocus]) {
-      tabs.current[tabFocus].focus();
-    } else {
-      // If we're at the end, go to the start
-      if (tabFocus >= tabs.current.length) {
-        setTabFocus(0);
-      }
-      // If we're at the start, move to the end
-      if (tabFocus < 0) {
-        setTabFocus(tabs.current.length - 1);
-      }
-    }
-  };
-
   // Only re-run the effect if tabFocus changes
-  useEffect(() => focusTab(), [tabFocus]);
+  useEffect(() => {
+    const focusTab = () => {
+      if (tabs.current[tabFocus]) {
+        tabs.current[tabFocus].focus();
+      } else {
+        // If we're at the end, go to the start
+        if (tabFocus >= tabs.current.length) {
+          setTabFocus(0);
+        }
+        // If we're at the start, move to the end
+        if (tabFocus < 0) {
+          setTabFocus(tabs.current.length - 1);
+        }
+      }
+    };
+
+    focusTab();
+  }, [tabFocus]);
 
   const onKeyPressed = e => {
     if (e.keyCode === 38 || e.keyCode === 40) {
@@ -211,7 +213,8 @@ const Jobs = ({ data }) => {
                     role="tab"
                     aria-selected={activeTabId === i ? true : false}
                     aria-controls={`panel-${i}`}
-                    tabIndex={activeTabId === i ? '0' : '-1'}>
+                    tabIndex={activeTabId === i ? '0' : '-1'}
+                  >
                     <span>{company}</span>
                   </StyledTabButton>
                 </li>
@@ -232,7 +235,8 @@ const Jobs = ({ data }) => {
                 role="tabpanel"
                 aria-labelledby={`tab-${i}`}
                 tabIndex={activeTabId === i ? '0' : '-1'}
-                hidden={activeTabId !== i}>
+                hidden={activeTabId !== i}
+              >
                 <StyledJobTitle>
                   <span>{title}</span>
                   <StyledCompany>

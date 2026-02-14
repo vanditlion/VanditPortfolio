@@ -30,13 +30,16 @@ const StyledList = styled.ul`
 `;
 const StyledLink = styled.a`
   padding: 10px;
+  color: ${colors.lightSlate};
   &:hover,
   &:focus {
     transform: translateY(-3px);
+    color: ${colors.green};
   }
   svg {
     width: 25px;
     height: 25px;
+    fill: currentColor;
   }
 `;
 
@@ -50,7 +53,8 @@ const Social = ({ isHome }) => (
               href={url}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              aria-label={name}>
+              aria-label={name}
+            >
               <FormattedIcon name={name} />
             </StyledLink>
           </li>

@@ -10,7 +10,7 @@ const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+  min-height: 80vh;
   ${media.tablet`padding-top: 150px;`};
   div {
     width: 100%;

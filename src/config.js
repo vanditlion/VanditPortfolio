@@ -4,53 +4,41 @@ module.exports = {
     'Vandit U Shah is an AI/ML Engineer focused on NLP, generative AI, and scalable data pipelines.',
   siteKeywords:
     'Vandit U Shah, Vandit, AI/ML Engineer, machine learning, NLP, generative AI, MLOps, Python, SQL, Spark, Kubernetes, AWS, Azure, GCP',
-  siteUrl: 'https://example.com/',
+  siteUrl: 'https://vanditlion.github.io/',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
   name: 'Vandit U Shah',
   location: 'USA',
   email: 'Vandit684@gmail.com',
-  github: 'https://github.com/',
+  github: 'https://github.com/vanditlion',
   twitterHandle: '@',
   socialMedia: [
     {
-      name: 'Vandit U Shah',
-      url: 'https://github.com/',
+      name: 'GitHub',
+      url: 'https://github.com/vanditlion',
     },
     {
-      name: 'Vandit U Shah',
-      url: 'https://www.linkedin.com/in/',
-    },
-    {
-      name: 'Vandit U Shah',
-      url: 'https://codepen.io/',
-    },
-    {
-      name: 'Vandit U Shah',
-      url: 'https://www.instagram.com/',
-    },
-    {
-      name: 'Vandit U Shah',
-      url: 'https://twitter.com/',
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/vandit-shah-717aa31b9?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
     },
   ],
 
   navLinks: [
     {
-      name: 'Vandit U Shah',
+      name: 'About',
       url: '/#about',
     },
     {
-      name: 'Vandit U Shah',
+      name: 'Experience',
       url: '/#jobs',
     },
     {
-      name: 'Vandit U Shah',
+      name: 'Work',
       url: '/#projects',
     },
     {
-      name: 'Vandit U Shah',
+      name: 'Contact',
       url: '/#contact',
     },
   ],
