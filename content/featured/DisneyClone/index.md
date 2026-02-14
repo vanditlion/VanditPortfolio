@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'Smart Scheduling & Booking System'
-cover: './disneyclone.png'
+cover: './cover.png'
 github: ''
 external: ''
 tech:

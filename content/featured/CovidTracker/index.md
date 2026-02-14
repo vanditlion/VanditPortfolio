@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Virtual Event Management System'
-cover: 'demo1.png'
+cover: './cover.png'
 github: ''
 external: ''
 tech:
