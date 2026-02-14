@@ -1,5 +1,0 @@
-{
-  "expireTime": 9007201025786501000,
-  "key": "transformer-remark-markdown-html-925a506d534ff7db5f476da4214dec44-gatsby-remark-external-linksgatsby-remark-imagesgatsby-remark-code-titlesgatsby-remark-prismjs-",
-  "val": "<ul>\n<li>Engineered SmartTransaction AI platform processing millions of daily transactions; reduced fraud by 32% and improved risk decision latency by 45%.</li>\n<li>Built scalable pipelines with Python, SQLAlchemy, Pydantic; normalized data into PostgreSQL/feature stores with 99.7% schema validation accuracy.</li>\n<li>Designed enrichment/categorization NLP models (spaCy, FinBERT); improved precision by 20%.</li>\n<li>Optimized transformer models (Longformer, FinBERT) on 250K+ transactions; raised F1 from 74% to 89%, cut inference costs by 38% using LoRA/PEFT.</li>\n<li>Implemented RAG with LangChain, FAISS, AWS Lambda; increased investigation accuracy by 28% and reduced manual review time by 35%.</li>\n<li>Integrated agentic workflows via AWS Bedrock; ensured SOC2/PCI-DSS compliance, CI/CD, monitoring, explainability, HA services.</li>\n</ul>"
-}
